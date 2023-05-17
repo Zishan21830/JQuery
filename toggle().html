@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle() Methode in JQuery</title>
+    <!-- Google FOnt - poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <!-- link JQuery -->
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                $("img").toggle(700);
+            });
+        });
+    </script>
+    <style>
+      .img-container {
+        height: 95vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .img-container img {
+        width: 400px;
+        height: 400px;
+        border: 0.2rem solid #e9afa9;
+        /* display: none; */
+      }
+
+      .img-container button {
+        padding: 1rem 8.3rem;
+        border: none;
+        border: 0.2rem solid #e9afa9;
+        color: #e9afa9;
+        cursor: pointer;
+        font-size: 2rem;
+        font-family: 'Bodoni Moda', serif;
+        
+        /* background-color: transparent; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-container">
+      <img src="img20.jpg" alt="image" />
+      <button class="btn">Click Me</button>
+    </div>
+  </body>
+</html>
