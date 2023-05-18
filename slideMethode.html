@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/9f7198c825.js" crossorigin="anonymous"></script>
+    <script>
+
+      $(document).ready(function(){
+          // For Slide Down
+            $("#flip-1").click(function() {
+                $("#slide-1").slideDown(500);
+            });
+          // For Slide Up
+            $("#flip-2").click(function() {
+                $("#slide-2").slideUp(500);
+            });
+          // For Slide Toggle
+            $("#flip-3").click(function() {
+                $("#slide-3").slideToggle(500);
+            });
+        });
+    </script>
+    <style>
+      .d-flex{
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .container{
+        flex-direction: column;
+      }
+
+      .main-container{
+        gap: 1rem;
+      }
+      .container .flip{
+        border: 0.1rem solid;
+        width: 300px;
+        text-align: center;
+        padding: 1rem 4rem;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .container .slide{
+        width: 300px;
+        height: 200px;
+        border: 0.1rem solid;
+        padding: 1rem 4rem;
+        text-align: justify;
+        /* display: none; */
+        /* position: absolute;
+        bottom: 0;
+        top: 0; */
+      }
+
+      #slide-1{
+        display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <main class="main-container d-flex">
+      <!-- Slide Down Methode of JQuery -->
+    <div class="container-1 d-flex container">
+      <div id="flip-1" class="flip"><i class="fas fa-solid fa-arrow-down"></i> SlideDown()</div>
+      <div id="slide-1" class="slide">
+        <p>jQuery slideDown() can be applied on a hidden HTML element to generate a slide down effect. When slide down effect is applied, the display attribute of element is changed to visible. The transition though happens as sliding down.</p>
+        <a href="https://www.tutorialkart.com/jquery/?tutorial=jquery-slide-down">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Slide Up Methode of JQuery -->
+    <div class="container-2 d-flex container">
+      <div id="flip-2" class="flip"><i class="fas fa-solid fas fa-arrow-up"></i> SlideUp()</div>
+      <div id="slide-2" class="slide">
+        jQuery slideUp() can be applied on HTML element to generate a sliding up effect. Usually, the initial state of the HTML element is visible, so that when slideUp effect is applied, the HTML slides up and disappears.
+        <a href="https://www.tutorialkart.com/jquery/?tutorial=jquery-slide-up">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Slide Toggle Methode of JQuery -->
+    <div class="container-3 d-flex container">
+      <div id="flip-3" class="flip"><i class="fas fa-arrow-down"></i><i class="fas fa-arrow-up"></i> SlideToggle()</div>
+      <div id="slide-3" class="slide">
+        The jQuery slideToggle() method is used to switch between the slideUp and slideDown states.
+
+        <li>If the HTML element is hidden or already slided up, slideToggle() method makes them slide down.</li>
+        <li>If the HTML element is visible or already slided down, slideToggle() method makes them slide up.</li>
+
+        <a href="https://www.tutorialkart.com/jquery/?tutorial=jquery-slide-toggl">Learn more</a>
+      </div>
+    </div>
+    </main>
+    <script src="https://kit.fontawesome.com/9f7198c825.js" crossorigin="anonymous"></script>
+  </body>
+</html>
